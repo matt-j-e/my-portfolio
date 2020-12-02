@@ -16,12 +16,22 @@ body {
   margin: 0 auto;
 }
 
+h2, h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 a:link, a:visited {
   color: inherit;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+figure {
+  margin: 0;
 }
 
 .main-nav {
@@ -92,26 +102,53 @@ main {
 section {
   padding: 1rem;
   max-width: 600px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding-bottom: 4rem;
   position: relative;
 }
 
+section:nth-child(odd) {
+  background-color: var(--white);
+  color: var(--dark-grey);
+}
+
+section:nth-child(even) {
+  background-color: var(--mid-grey);
+}
+
 .top-link {
   position: absolute;
+  display: block;
   right: 1rem;
   top: 0.5rem;
   text-transform: uppercase;
-  color: var(--mid-grey)
+  color: var(--dark-grey);
+  /* background-color: var(--cream); */
+  padding: 0.3rem 0.6rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--dark-grey);
+  border-right: 1px solid var(--dark-grey);
+  border-radius: 0.2rem;
+  font-size: smaller;
+}
+
+.top-link a {
+  text-decoration: none;
 }
 
 section h2 {
-  text-transform: uppercase;
-  font-size: 1.6rem;
-  text-align: center;
+  font-size: 3rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--mid-grey);
-  color: var(--orange);
+  border-bottom: 1px solid var(--dark-grey);
+  color: var(--dark-grey);
+}
+
+section h3 {
+  font-size: 2rem;
+  color: var(--dark-grey);
+  background-color: var(--cream);
+  padding: 1rem 0;
+  margin: 2rem -1rem 1rem -1rem;
 }
 
 #accident {
@@ -125,25 +162,27 @@ section h2 {
   font-style: italic;
 }
 
-#history, #about {
-  background-color: var(--white);
-  color: var(--dark-grey);
-}
-
-#projects h3 {
-  text-align: center;
-  color: var(--cream);
-  background-color: var(--mid-grey);
-  padding: 1rem 0;
-  margin: 2rem -1rem 1rem -1rem;
-}
-
 .project {
   margin-bottom: 4rem;
 }
 
 .project-inner img {
   width: 100%;
+}
+
+.project-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #505B5F;
+  padding: 0.5rem;
+  border: 1px solid var(--white);
+  border-radius: 0.5rem;
+}
+
+.project-link:hover {
+  background-color: #404B4F;
 }
 
 .about img {
