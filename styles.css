@@ -240,13 +240,21 @@ input:focus, textarea:focus {
   outline: 5px solid var(--orange);
 }
 
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .button {
   font-size: 0.85rem;
   font-weight: 600;
+  line-height: 1.7rem;
   text-transform: uppercase;
-  width: 48%;
-  padding: 0.2rem;
-  
+  width: 45%;
+  /* padding: 0.3rem; */
+  margin: 0;
+  cursor: pointer;
 }
 
 .submit {
