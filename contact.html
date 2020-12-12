@@ -41,12 +41,22 @@
   </main>
 
   <script>
+    const fields = ["name", "email", "message"];
+    
     document.querySelector("#btn-clear").addEventListener("click", function(e) {
-      const fields = ["name", "email", "message"];
-      for (field in fields) {
-        document.getElementById(field).innerText = '';
+      for (field of fields) {
+        document.getElementById(field).value = '';
       }
-      // e.preventDefault();
+    });
+
+    document.querySelector("#btn-submit").addEventListener("click", function(e) {
+      e.preventDefault();
+      const data = [];
+      for (field of fields) {
+        // item = document.getElementById(field).value
+        data.push(document.getElementById(field).value);
+      };
+      window.alert(`NAME: ${data[0]}\n\nEMAIL: ${data[1]}\n\nMESSAGE: \n${data[2]}`);
     });
   </script>
     
