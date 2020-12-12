@@ -202,7 +202,12 @@ a.project-link {
 
 footer {
   padding: 1rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div {
+  width: 25%;
 }
 
 /*** CONTACT PAGE ***/
