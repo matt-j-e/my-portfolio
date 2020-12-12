@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+  <title>Contact Matt</title>
+</head>
+<body>
+
+  <nav>
+    <ul class="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#history">my history</a></li>
+      <li><a href="index.html#projects">projects</a></li>
+      <li><a href="index.html#about">about me</a></li>
+      <!-- <li><a href="#contact">contact me</a></li> -->
+    </ul>
+  </nav>
+
+  <main>
+    <section id="contact">
+      <h1 class="branding">Get in touch</h1>
+      <form id="contact-form" action="#">
+        <label for="name" class="screen-reader-text">Your name</label>
+        <p><input type="text" id="name" name="name" placeholder="Your name"></p>
+
+        <label for="email" class="screen-reader-text">Your email</label>
+        <p><input type="email" id="email" name="email" placeholder="Your email"></p>
+
+        <label for="message" class="screen-reader-text">Your message</label>
+        <p><textarea name="message" id="message" placeholder="Your message" cols="30" rows="10"></textarea></p>
+
+        <button class="button submit" type="submit" name="submit" id="btn-submit">Send message</button>
+
+        <button class="button clear" type="reset" id="btn-clear">Clear form</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.querySelector("#btn-clear").addEventListener("click", function(e) {
+      const fields = ["name", "email", "message"];
+      for (field in fields) {
+        document.getElementById(field).innerText = '';
+      }
+      // e.preventDefault();
+    });
+  </script>
+    
+</body>
+</html>
