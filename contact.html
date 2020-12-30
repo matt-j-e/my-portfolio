@@ -69,6 +69,14 @@
       };
       window.alert(`NAME: ${data[0]}\n\nEMAIL: ${data[1]}\n\nMESSAGE: \n${data[2]}`);
     });
+  
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 0) {
+        document.querySelector('nav').style.boxShadow = '0 3px rgba(0,0,0,0.1)';
+      } else {
+        document.querySelector('nav').style.boxShadow = 'none';
+      }
+    });
   </script>
     
 </body>
